@@ -60,12 +60,12 @@ irc:
           - uploader
           - torrentName
       - tests:
-          - line: '[Category: Movies] [Type: Remux] [Size: 18 GiB] [TMDB vote average: 0] [TMDB vote count: 0]'
+          - line: '[Category: Movies] [Type: Remux] [Size: 18 GiB] [TMDB vote average: 7.3] [TMDB vote count: 0]'
             expect:
               category: Movies
               releaseTags: Remux
               torrentSize: "18 GiB"
-        pattern: '^\[Category: (.+)\] \[Type: (.+)\] \[Size: (.+)\] \[TMDB vote average: \d+\] \[TMDB vote count: \d+\]'
+        pattern: '^\[Category: (.+)\] \[Type: (.+)\] \[Size: (.+)\] \[TMDB vote average: [\d.]+\] \[TMDB vote count: \d+\]'
         vars:
           - category
           - releaseTags
